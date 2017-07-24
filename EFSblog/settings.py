@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-#import dj_database_url
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -82,24 +82,17 @@ WSGI_APPLICATION = 'EFSblog.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-DATABASES = {
+DATABASES= {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dcojj027okc40u',
+        'USER': 'vwuzmibcqlkcqw',
+        'PASSWORD': 'c2a7e888cf2a97ad8e245aa3feaa8005bae4db338f01c77c637162d919798bac',
+        'HOST': 'ec2-107-20-188-239.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
-#DATABASES= {
-   # 'default': {
-  #      'ENGINE': 'django.db.backends.postgresql',
-   #     'NAME': 'deg7hkjjqcfm0j',
-   #     'USER': 'arkwusdsryhzme',
-   #     'PASSWORD': '39eafa157ce678f9baa58aff1662462e46a2d87c5451a26640910a36e165657d',
-   #     'HOST': 'ec2-23-21-96-159.compute-1.amazonaws.com',
-   #     'PORT': '5432',
- #   }
-#}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -149,8 +142,8 @@ STATICFILES_DIRS = (
 
 # Update database configuration with $DATABASE_URL.
 
-#db_from_env = dj_database_url.config(conn_max_age=500)
-#DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 
 
