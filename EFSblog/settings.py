@@ -42,14 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-#    'rest_framework',
+    'rest_framework',
     'portfolio',
     'whitenoise',
+    'mathfilters',
     ]
 
  #   'django_extensions',
   #  'blog',
-     #'mathfilters',
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

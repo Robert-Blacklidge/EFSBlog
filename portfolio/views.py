@@ -5,7 +5,19 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from .forms import *
 from django.db.models import Sum
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import CustomerSerializer
 
+# List at the end of the views.py
+# Lists all customers
+class CustomerList(APIView):
+
+    def get(self,request):
+        customers_json = Customer.objects.all()
+        serializer = CustomerSerializer(customers_json, many=True)
+        return Response(serializer.data)
 
 
 def home(request):
@@ -102,25 +114,25 @@ def investment_list(request):
 
 @login_required
 def investment_edit(request, pk):
-   inverstment = get_object_or_404(Investment, pk=pk)
+   investment = get_object_or_404(Investment, pk=pk)
    if request.method == "POST":
        # update
-       form = InvestmentForm(request.POST, instance=inverstment)
+       form = InvestmentForm(request.POST, instance=investment)
        if form.is_valid():
-           inverstment = form.save(commit=False)
-           inverstment.updated_date = timezone.now()
-           inverstment.save()
-           inverstment = Investment.objects.filter(created_date__lte=timezone.now())
-           return render(request, 'portfolio/investment_list.html', {'investments': inverstment})
+           investment = form.save(commit=False)
+           investment.updated_date = timezone.now()
+           investment.save()
+           investment = Investment.objects.filter(created_date__lte=timezone.now())
+           return render(request, 'portfolio/investment_list.html', {'investments': investment})
    else:
        # edit
-       form = InvestmentForm(instance=inverstment)
+       form = InvestmentForm(instance=investment)
    return render(request, 'portfolio/investment_edit.html', {'form': form})
 
 @login_required
 def investment_delete(request, pk):
-   inverstment = get_object_or_404(Investment, pk=pk)
-   inverstment.delete()
+   investment = get_object_or_404(Investment, pk=pk)
+   investment.delete()
    return redirect('portfolio:investment_list')
 
 @login_required
@@ -128,12 +140,12 @@ def investment_new(request):
    if request.method == "POST":
        form = InvestmentForm(request.POST)
        if form.is_valid():
-           inverstment = form.save(commit=False)
-           inverstment.created_date = timezone.now()
-           inverstment.save()
-           inverstments = Investment.objects.filter(purchase_date__lte=timezone.now())
+           investment = form.save(commit=False)
+           investment.created_date = timezone.now()
+           investment.save()
+           investments = Investment.objects.filter(purchase_date__lte=timezone.now())
            return render(request, 'portfolio/investment_list.html',
-                         {'inverstments': inverstments})
+                         {'investments': investments})
    else:
        form = InvestmentForm()
        # print("Else")
@@ -143,14 +155,16 @@ def investment_new(request):
 
 
 @login_required
-def portfolio(request,pk):
-   customer = get_object_or_404(Customer, pk=pk)
-   customers = Customer.objects.filter(created_date__lte=timezone.now())
-   investments =Investment.objects.filter(customer=pk)
-   stocks = Stock.objects.filter(customer=pk)
-   sum_acquired_value = Investment.objects.filter(customer=pk).aggregate(Sum('acquired_value'))
+def portfolio(request):
+    customer = get_object_or_404(Customer, pk=pk)
+    customers = Customer.objects.filter(created_date__lte=timezone.now())
+    investments =Investment.objects.all()
+    stocks = Stock.objects.all()
+    sum_recent_value = Investment.objects.all().aggregate(Sum('recent_value'))
+    sum_acquired_value = Investment.objects.all().aggregate(Sum('acquired_value'))
 
 
-   return render(request, 'portfolio/portfolio.html', {'customers': customers, 'investments': investments,
-                                                      'stocks': stocks,
-                                                      'sum_acquired_value': sum_acquired_value,})
+    return render(request, 'customers/portfolio.html', {'customers': customers, 'investments': investments,
+                                                       'stocks': stocks,
+                                                       'sum_recent_value': sum_recent_value,
+                                                       'sum_acquired_value': sum_acquired_value,})
