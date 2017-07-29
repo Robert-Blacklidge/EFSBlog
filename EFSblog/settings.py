@@ -84,24 +84,24 @@ WSGI_APPLICATION = 'EFSblog.wsgi.application'
 
 
 # Database for PythonAnywhere
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-#Database for Heroku
-#DATABASES= {
+#DATABASES = {
 #    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'dcghe7oja9de75',
-#        'USER': 'eixoeidiovtpls',
-#        'PASSWORD': '66ff69855827cf68b88152c03dd5b0ca38e9218ed03ab077fd276f76f2ea8e1e',
-#        'HOST': 'ec2-54-221-221-153.compute-1.amazonaws.com',
-#        'PORT': '5432',
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
 #}
+
+#Database for Heroku
+DATABASES= {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dfu7c8ktnob8j6',
+        'USER': 'fqfeddmuoguvvd',
+        'PASSWORD': '754610429005265d45292d370ad7ecb4fc4c3c43fef002b6468540353900fd6a',
+        'HOST': 'ec2-23-23-244-83.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 
 

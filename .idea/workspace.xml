@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed9039e3-6146-4805-8bc0-534eae1ddef9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/templates/Portfolio/investment_list.html" afterPath="$PROJECT_DIR$/portfolio/templates/Portfolio/investment_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/templates/Portfolio/portfolio.html" afterPath="$PROJECT_DIR$/portfolio/templates/Portfolio/portfolio.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/views.py" afterPath="$PROJECT_DIR$/portfolio/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EFSblog/settings.py" afterPath="$PROJECT_DIR$/EFSblog/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,6 +16,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EFSblog/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="portfolio.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/templates/Portfolio/portfolio.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="investment_list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="investment_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/templates/Portfolio/investment_list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="825">
@@ -114,7 +119,6 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/EFSblog/wsgi.py" />
-        <option value="$PROJECT_DIR$/EFSblog/settings.py" />
         <option value="$PROJECT_DIR$/portfolio/serializers.py" />
         <option value="$PROJECT_DIR$/portfolio/models.py" />
         <option value="$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/auth/decorators.py" />
@@ -123,12 +127,13 @@
         <option value="$PROJECT_DIR$/portfolio/urls.py" />
         <option value="$PROJECT_DIR$/portfolio/views.py" />
         <option value="$PROJECT_DIR$/portfolio/templates/Portfolio/portfolio.html" />
+        <option value="$PROJECT_DIR$/EFSblog/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-137" />
-    <option name="y" value="68" />
+    <option name="x" value="727" />
+    <option name="y" value="21" />
     <option name="width" value="1589" />
     <option name="height" value="1019" />
   </component>
@@ -188,28 +193,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EFSblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EFSblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,7 +385,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-137" y="68" width="1589" height="1019" extended-state="0" />
+    <frame x="727" y="21" width="1589" height="1019" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3056093" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -741,16 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EFSblog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#310#319#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -850,6 +823,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="57" column="54" lean-forward="false" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFSblog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding />
         </state>
       </provider>
